@@ -10,8 +10,7 @@
     'website'       : "http://www.pegafrica.com",
     'category'      : 'Sale',
     'version'       : '14.0.1',
-    'depends'       : ['sale'],
-
+    'depends'       : ['contacts', 'sale_management'],
     'data'          : [
                         'security/ir.model.access.csv',
                         'views/sale_order.xml',
