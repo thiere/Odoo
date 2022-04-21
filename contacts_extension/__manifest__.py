@@ -8,7 +8,6 @@
     'category'      : 'Contacts',
     'version'       : '14.0.1',
     'depends'       : ['contacts'],
-
     'data'          : [
                         'security/groups.xml',
                         'security/ir.model.access.csv',
