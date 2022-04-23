@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Adding sale status field in sale order form view -->
+    <record id="sale_status_view_form" model="ir.ui.view">
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet//div[@name='button_box']" position="after">
+                <field name="sale_status" invisible="1" />
+                <widget name="web_ribbon" title="Critical" attrs="{'invisible': ['|', ('sale_status', '!=', 'critical'), ('invoice_status', 'not in', ['to invoice', 'invoiced'])]}"/>
+                <widget name="web_ribbon" title="Defaulted" attrs="{'invisible': ['|', ('sale_status', '!=', 'defaulted'), ('invoice_status', 'not in', ['to invoice', 'invoiced'])]}"/>
+                <widget name="web_ribbon" title="No Risk" attrs="{'invisible': ['|', ('sale_status', '!=', 'no_risk'), ('invoice_status', 'not in', ['to invoice', 'invoiced'])]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Adding sale status field in sale order tree view -->
+    <record id="sale_status_view_tree" model="ir.ui.view">
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="sale_status" optional="show" decoration-success="sale_status == 'no_risk'" decoration-info="sale_status == 'critical'" decoration-warning="sale_status == 'defaulted'" widget="badge" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
