@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-acl_region,contact.region_default,model_contact_region,,1,0,0,0
-acl_contact_region,contacts.contact_region,model_contact_region,sales_team.group_sale_manager,1,1,1,1
