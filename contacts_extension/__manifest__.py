@@ -3,7 +3,7 @@
     'name'          : "Contacts Extension",
     'summary'       : "Extension of Contacts Module",
     'description'   : """ 
-                        This modules allows authorized users to store contacts Next of Kin. test
+                        This modules allows authorized users to store contacts Next of Kin. test encore
                       """,
     'author'        : "Thierno Mamadou Diallo",
     'website'       : "http://www.pegafrica.com",
