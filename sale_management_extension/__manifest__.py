@@ -5,7 +5,6 @@
     'description'   : """ 
                         This module add region and geodata fields in contacts form view /
                         Allows sale status management / 
-                        Add 100 Days payment term 
                       """,
     'author'        : "Thierno Diallo",
     'website'       : "http://www.pegafrica.com",
