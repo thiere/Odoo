@@ -7,7 +7,7 @@
                         Allows sale status management / 
                         Add 100 Days payment term 
                       """,
-    'author'        : "Thierno Mamadou Diallo",
+    'author'        : "Thierno Diallo",
     'website'       : "http://www.pegafrica.com",
     'category'      : 'Sale',
     'version'       : '14.0.1',
